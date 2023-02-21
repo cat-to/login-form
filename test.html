@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="test.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-form">
+        <form>
+          <h2>Login</h2>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <button type="submit">Log In</button>
+          </div>
+        </form>
+        <p class="success-message">Login Successful!</p>
+      </div>
+      <script>
+      // Get the login form element
+        const loginForm = document.querySelector('.login-form');
+        
+        // Add an event listener to wait for the page to load
+        window.addEventListener('load', () => {
+          // Add the 'show' class to the login form
+          loginForm.classList.add('show');
+        });
+        const form = document.querySelector('form');
+const successMessage = document.querySelector('.success-message');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent form submission
+
+  // Get the values of the username and password fields
+  const username = document.querySelector('#username').value;
+  const password = document.querySelector('#password').value;
+
+  // Check if the username and password are correct
+  if (username === 'test' && password === '123') {
+    // Show the success message
+    successMessage.style.display = 'block';
+  }
+});
+
+        </script>
+</body>
+
+</html>
+
+  
